@@ -1,0 +1,274 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+ font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url('images/Firefly_sunset clouds without human, in orange, purple, pink and blue colors 904203.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: parallax feel */
+    min-height: 100vh;
+    
+
+    /* Optimize image rendering */
+    image-rendering: optimizeQuality;
+    -webkit-image-rendering: optimizeQuality;
+    -moz-image-rendering: optimizeQuality;
+    backface-visibility: hidden;
+    
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav { 
+  height: 150px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+   
+.blog-content {
+    padding-top: 150px; /* or slightly more than .nav height */
+}
+
+.nav ul {
+    display: flex;
+    gap: 120px;
+    list-style: none;
+}
+
+.nav a{
+    text-decoration: none;
+    color:white;
+   transition: color 0.8s ease;
+   font-size: 30px;
+}
+
+.nav a:hover{
+    color:aquamarine;
+}
+
+.blog-content  ul li{   
+    list-style-type: none;
+    padding-left: 40px;
+    margin-bottom: 1em;
+    
+}
+
+
+h1, h2, h3{
+    text-align: center;
+    margin:50px;
+}
+
+.blog-content p,
+.blog-content ul,
+.blog-content li {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 20px;
+    line-height: 1.6;
+letter-spacing: 0.3px;
+
+}
+
+.content1 {
+    width: clamp(300px, 50%, 700px); /* scales between min and max */
+    height: auto; /* Remove fixed height */
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);   
+    border-radius: 15px;
+    padding: 20px;
+    flex: 0 0 clamp(300px, 60vw, 700px); /* stays fixed for each slide */
+    scroll-snap-align: center;
+}
+
+
+
+
+
+.content2{
+    width: clamp(300px, 50%, 700px); /* scales between min and max */
+    height: auto; /* Remove fixed height */
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);   
+    border-radius: 15px;
+    padding: 20px;
+    flex: 0 0 clamp(300px, 60vw, 700px); /* stays fixed for each slide */
+    scroll-snap-align: center;
+}
+
+
+
+.foot{
+    width:100%;
+    height:100px;
+    background-color:black ;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:50px;
+}
+
+.foot ul{
+     display: flex;
+    gap: 120px;
+    list-style: none;
+}
+
+
+.foot a{
+    text-decoration: none;
+    color:white;
+   transition: color 0.8s ease;
+   font-size: 20px;
+}
+
+.foot a:hover{
+    color:rgb(245, 139, 17);
+}
+
+li span{
+    font-weight: bold;
+}
+
+.fa-arrow-right{
+    font-size: 60px;
+    position: fixed;
+    top:500px;
+    left:1700px;
+    color:white;
+    transition: left 0.3s ease, right 0.3s ease, transform 0.3s ease;
+
+}
+
+.fa-arrow-right:hover{
+    color:rgb(255, 230, 0);
+    cursor: pointer;
+}
+
+.fa-arrow-left{
+       font-size: 60px;
+    position: fixed;
+    top:500px;
+    right:1700px;
+    color:white;
+    transition: left 0.3s ease, right 0.3s ease, transform 0.3s ease;
+
+}
+
+.fa-arrow-left:hover{
+    color:rgb(255, 230, 0);
+    cursor: pointer;
+}
+
+
+
+/*  Arrows move in when screen < 1835px */
+@media (max-width: 1835px) {
+  .fa-arrow-right {
+    left: auto;
+    right: 30px;
+  }
+
+  .fa-arrow-left {
+    right: auto;
+    left: 30px;
+  }
+}
+
+/*  Arrows shrink and center when screen < 1200px */
+@media (max-width: 1200px) {
+  .fa-arrow-right,
+  .fa-arrow-left {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    z-index: 1000;
+    color: white;
+  }
+
+  .fa-arrow-right {
+    right: 10px;
+    left: auto;
+    
+  }
+
+  .fa-arrow-left {
+    left: 10px;
+    right: auto;
+  }
+}
+
+
+@media (max-width: 768px){
+  .nav {
+      height: auto;
+      padding: 15px 0;
+  }
+
+  .nav ul {
+      flex-direction:row;
+      gap: 50px;
+  }
+
+  .nav a {
+      font-size: 20px;
+  }
+
+  .content1 {
+      width: 90%;
+      padding: 20px;
+  }
+
+  .blog-content p,
+  .blog-content ul,
+  .blog-content li {
+      font-size: 18px;
+      padding: 0 10px;
+  }
+
+  .foot {
+      height: auto;
+      padding: 15px 0;
+  }
+
+  .foot ul {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .foot a {
+      font-size: 18px;
+  }
+}
