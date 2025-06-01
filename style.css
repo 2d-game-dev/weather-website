@@ -10,18 +10,14 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Optional: parallax feel */
-    min-height: 100vh;
-    
-
-    /* Optimize image rendering */
+    background-attachment: fixed; 
+    min-height: 100vh;  
+ 
     image-rendering: optimizeQuality;
     -webkit-image-rendering: optimizeQuality;
     -moz-image-rendering: optimizeQuality;
-    backface-visibility: hidden;
-    
+    backface-visibility: hidden;    
 }
-
 
 .navbar {
     position: fixed;
@@ -30,7 +26,6 @@ body{
     width: 100%;
     z-index: 1000;
 }
-
 .nav { 
   height: 150px;
   background-color: black;
@@ -42,7 +37,7 @@ body{
 
    
 .blog-content {
-    padding-top: 150px; /* or slightly more than .nav height */
+    padding-top: 150px; 
 }
 
 .nav ul {
@@ -89,7 +84,7 @@ letter-spacing: 0.3px;
 
 .content1 {
     width: clamp(300px, 50%, 700px); /* scales between min and max */
-    height: auto; /* Remove fixed height */
+    height: auto; 
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.4);
     display: flex;
@@ -101,17 +96,13 @@ letter-spacing: 0.3px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);   
     border-radius: 15px;
     padding: 20px;
-    flex: 0 0 clamp(300px, 60vw, 700px); /* stays fixed for each slide */
+    flex: 0 0 clamp(300px, 60vw, 700px); 
     scroll-snap-align: center;
 }
-
-
-
-
 
 .content2{
     width: clamp(300px, 50%, 700px); /* scales between min and max */
-    height: auto; /* Remove fixed height */
+    height: auto; 
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.4);
     display: flex;
@@ -123,11 +114,9 @@ letter-spacing: 0.3px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);   
     border-radius: 15px;
     padding: 20px;
-    flex: 0 0 clamp(300px, 60vw, 700px); /* stays fixed for each slide */
+    flex: 0 0 clamp(300px, 60vw, 700px); 
     scroll-snap-align: center;
 }
-
-
 
 .foot{
     width:100%;
@@ -192,8 +181,6 @@ li span{
 }
 
 
-
-/*  Arrows move in when screen < 1835px */
 @media (max-width: 1835px) {
   .fa-arrow-right {
     left: auto;
@@ -206,7 +193,6 @@ li span{
   }
 }
 
-/*  Arrows shrink and center when screen < 1200px */
 @media (max-width: 1200px) {
   .fa-arrow-right,
   .fa-arrow-left {
@@ -229,7 +215,6 @@ li span{
     right: auto;
   }
 }
-
 
 @media (max-width: 768px){
   .nav {
