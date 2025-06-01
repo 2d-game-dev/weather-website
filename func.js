@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     content2.forEach(el => el.style.display = "block");
 
     // Changed background
-    body.style.backgroundImage = "url('images/Firefly_an\ image\ of\ grey\ clouds\ without\ humans\ 274337.jpg')"; // Replace with your new background image
+    body.style.backgroundImage = "url('images/Firefly_an\ image\ of\ grey\ clouds\ without\ humans\ 274337.jpg')"; 
     body.style.backgroundSize = "cover";
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center";
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     content1.forEach(el => el.style.display = "block");
 
     // Original background
-    body.style.backgroundImage = "url('images/Firefly_sunset clouds without human, in orange, purple, pink and blue colors 904203.jpg')"; // Replace with your original background
+    body.style.backgroundImage = "url('images/Firefly_sunset clouds without human, in orange, purple, pink and blue colors 904203.jpg')"; 
     body.style.backgroundSize = "cover";
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center";
